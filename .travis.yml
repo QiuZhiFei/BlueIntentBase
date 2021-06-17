@@ -15,7 +15,6 @@ matrix:
           XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=13.2.2"
       script:
         - set -o pipefail
-        - cd Example && pod install --verbose && cd ..
         - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination "$XCODE_DESTINATION" build test | xcpretty
         - pod lib lint
 
