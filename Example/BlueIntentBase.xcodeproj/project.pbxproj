@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		25200EABE52B78060FB3227B /* Pods_BlueIntentBase_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B3237C1AE3F4343FA2E855 /* Pods_BlueIntentBase_Example.framework */; };
+		5B2CD226267B40AC00A814A1 /* BlueIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CD225267B40AC00A814A1 /* BlueIntent.swift */; };
+		5B2CD228267B40BB00A814A1 /* BlueIntentCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2CD227267B40BB00A814A1 /* BlueIntentCompatible.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,8 +32,10 @@
 /* Begin PBXFileReference section */
 		00B3237C1AE3F4343FA2E855 /* Pods_BlueIntentBase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueIntentBase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		062CAC05DB2720CE4E3B5BE7 /* Pods-BlueIntentBase_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueIntentBase_Example.release.xcconfig"; path = "Target Support Files/Pods-BlueIntentBase_Example/Pods-BlueIntentBase_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1BBB6BD41F87ABF642F35981 /* BlueIntentBase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BlueIntentBase.podspec; path = ../BlueIntentBase.podspec; sourceTree = "<group>"; };
-		3969367AABAA58E22C04D778 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1BBB6BD41F87ABF642F35981 /* BlueIntentBase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BlueIntentBase.podspec; path = ../BlueIntentBase.podspec; sourceTree = "<group>"; };
+		3969367AABAA58E22C04D778 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5B2CD225267B40AC00A814A1 /* BlueIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlueIntent.swift; path = ../BlueIntentBase/Classes/BlueIntent.swift; sourceTree = "<group>"; };
+		5B2CD227267B40BB00A814A1 /* BlueIntentCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlueIntentCompatible.swift; path = ../BlueIntentBase/Classes/BlueIntentCompatible.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BlueIntentBase_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueIntentBase_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +48,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64BEB8288D6E0972F3731CED /* Pods-BlueIntentBase_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueIntentBase_Tests.release.xcconfig"; path = "Target Support Files/Pods-BlueIntentBase_Tests/Pods-BlueIntentBase_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9BFFF6E93689113786D6ECD7 /* Pods-BlueIntentBase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueIntentBase_Example.debug.xcconfig"; path = "Target Support Files/Pods-BlueIntentBase_Example/Pods-BlueIntentBase_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9F5EA471F75A82AE80751986 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9F5EA471F75A82AE80751986 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A7AFF2B8EE1A6CBC749F2101 /* Pods_BlueIntentBase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueIntentBase_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CFD84E8F5AB08E21394F93 /* Pods-BlueIntentBase_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueIntentBase_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BlueIntentBase_Tests/Pods-BlueIntentBase_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,8 @@
 				1BBB6BD41F87ABF642F35981 /* BlueIntentBase.podspec */,
 				3969367AABAA58E22C04D778 /* README.md */,
 				9F5EA471F75A82AE80751986 /* LICENSE */,
+				5B2CD225267B40AC00A814A1 /* BlueIntent.swift */,
+				5B2CD227267B40BB00A814A1 /* BlueIntentCompatible.swift */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -147,7 +153,6 @@
 				E1CFD84E8F5AB08E21394F93 /* Pods-BlueIntentBase_Tests.debug.xcconfig */,
 				64BEB8288D6E0972F3731CED /* Pods-BlueIntentBase_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +233,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -351,7 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5B2CD226267B40AC00A814A1 /* BlueIntent.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				5B2CD228267B40BB00A814A1 /* BlueIntentCompatible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

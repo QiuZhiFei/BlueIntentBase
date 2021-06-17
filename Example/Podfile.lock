@@ -1,0 +1,27 @@
+PODS:
+  - BlueIntentBase (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - BlueIntentBase (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  BlueIntentBase:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BlueIntentBase: 4b8e017eb7f7207ff4b54053daf08a775852a7c8
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: a82e1aaec864f5804f3a479bf61962f6834df970
+
+COCOAPODS: 1.10.1
