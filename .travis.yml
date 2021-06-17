@@ -24,5 +24,5 @@ before_install:
 script:
   - set -o pipefail
   - cd Example && pod install --verbose
-  - xcodebuild -workspace ${XCODE_WORKSPACE} -scheme ${XCODE_SCHEME} -destination "${XCODE_DESTINATION}"
+  - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination $XCODE_DESTINATION
   - pod lib lint
