@@ -5,10 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/BlueIntentBase)](https://github.com/qiuzhifei/BlueIntentBase/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/BlueIntentBase.svg?style=flat)](https://cocoapods.org/pods/BlueIntentBase)
 
-BlueIntentBase is a framework for for bi namespace in swift.
+Use `BlueIntentExtension` proxy as customization point for constrained protocol extensions.
 
-- 提供 swift 命名空间 bi
-- 参照 kotlin，提供作用域函数 let, var
+- Extend BlueIntentExtension protocol with constrain on Base
+- 参照 kotlin，提供作用域函数 (let, var)，优雅的解包
 
 ## Requirements
 
@@ -25,21 +25,34 @@ pod 'BlueIntentBase'
 ```
 import BlueIntentBase
 ```
-提供扩展
+add extension
 ```
+extension String: BlueIntentCompatible { }
 
+extension BlueIntentExtension where Base == String {
+  public var length: Int {
+    return base.count
+  }
+}
+
+let string = "test"
+string.bi.length // 4
 ```
-Custom
+scope functions
 ```
-let vc = UIViewController()
-vc.bi.transitioningData = .present.bi.var({ data in
-    var data = data
-    data.edgeTypes = [.leftToRight, .topToBottom]
-    data.maskColor = UIColor.black.withAlphaComponent(0.15)
-    data.transitionDuration = 0.5
-    return data
+var string: String?
+string = "test"
+
+// 解包
+string?.bi.let({ it in
+  // it 为解包值
+  XCTAssert(it == string)
 })
-self.present(vc, animated: true, completion: nil)
+
+// 解包，并提供新的返回值
+let newString = string?.bi.var({ it in
+  return "new: \(it)"
+})
 ```
 
 ## Manually
