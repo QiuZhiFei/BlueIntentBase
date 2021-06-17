@@ -6,12 +6,13 @@ language: swift # or objective-c
 
 matrix:
   include:
-    - xcode_scheme: "BlueIntentBase-Example"
+    - stage: Static Library & Tests
+      xcode_scheme: "BlueIntentBase-Example"
       osx_image: xcode11.2
       env:
         - XCODE_WORKSPACE=Example/BlueIntentBase.xcworkspace
-        - XCODE_SCHEME=BlueIntentBase-Example
-        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=13.2.2"
+          XCODE_SCHEME=BlueIntentBase-Example
+          XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=13.2.2"
 
 cache:
   - cocoapods
