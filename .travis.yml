@@ -4,18 +4,24 @@
 
 language: swift # or objective-c
 
-os: osx
-osx_image: xcode11.2
+matrix:
+  include:
+    - xcode_scheme: "BlueIntentBase-Example"
+      osx_image: xcode11.2
+      env:
+        - XCODE_WORKSPACE=Example/BlueIntentBase.xcworkspace
+        - XCODE_SCHEME=BlueIntentBase-Example
+        - XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=13.2.2"
 
-xcode_workspace: Example/BlueIntentBase.xcworkspace
-xcode_scheme: BlueIntentBase-Example
-xcode_destination: platform=iOS Simulator,name=iPhone 8,OS=13.2.2
-
-cache: cocoapods
-podfile: Example/Podfile
+cache:
+  - cocoapods
+# podfile: Example/Podfile
 before_install:
   - gem install cocoapods # Since Travis is not always on latest version
   - pod install --project-directory=Example
+
 script:
-  - set -o pipefail && xcodebuild -workspace Example/BlueIntentBase.xcworkspace -scheme BlueIntentBase-Example -destination platform\=iOS\ Simulator,name\=iPhone\ 8,OS\=13.2.2 build test | xcpretty
+  - set -o pipefail
+  - pod install --verbose
+  - xcodebuild -workspace "${XCODE_WORKSPACE}" -scheme "${XCODE_SCHEME}" -destination "${XCODE_DESTINATION}"
   - pod lib lint
