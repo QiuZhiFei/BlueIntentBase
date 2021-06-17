@@ -16,5 +16,6 @@ podfile: Example/Podfile
 before_install:
   - gem install cocoapods # Since Travis is not always on latest version
   - pod install --project-directory=Example
-# script:
-#   - pod lib lint
+script:
+  - set -o pipefail && xcodebuild -workspace Example/BlueIntentBase.xcworkspace -scheme BlueIntentBase-Example -destination platform\=iOS\ Simulator,name\=iPhone\ 8,OS\=13.2.2 build test | xcpretty
+  - pod lib lint
