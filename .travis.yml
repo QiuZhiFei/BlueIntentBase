@@ -16,7 +16,8 @@ matrix:
       script:
         - set -o pipefail
         - cd Example && pod install --verbose && cd ..
-        - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination $XCODE_DESTINATION
+        - echo "xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination {$XCODE_DESTINATION}"
+        - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination {$XCODE_DESTINATION}
         - pod lib lint
 
 cache:
