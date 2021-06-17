@@ -13,6 +13,12 @@ matrix:
         - XCODE_WORKSPACE=Example/BlueIntentBase.xcworkspace
           XCODE_SCHEME=BlueIntentBase-Example
           XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 8,OS=13.2.2"
+      script:
+        - set -o pipefail
+        - cd Example && pod install --verbose
+        - echo $XCODE_WORKSPACE
+        - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination $XCODE_DESTINATION
+        - pod lib lint
 
 cache:
   - cocoapods
@@ -21,8 +27,4 @@ before_install:
   - gem install cocoapods # Since Travis is not always on latest version
   - pod install --project-directory=Example
 
-script:
-  - set -o pipefail
-  - cd Example && pod install --verbose
-  - xcodebuild -workspace $XCODE_WORKSPACE -scheme $XCODE_SCHEME -destination $XCODE_DESTINATION
-  - pod lib lint
+
